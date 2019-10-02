@@ -10,10 +10,10 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <h1>Crypto Tracker</h1>
-      <div className="dark-mode__toggle">
-        <div
-          onClick={toggleMode}
-          className={darkMode ? 'toggle toggled' : 'toggle'}
+      <div className="dark-mode__toggle" onClick={toggleMode}> 
+        <div 
+          // moved onClick to container so whole switch is clickable
+          className={darkMode ? 'toggle toggled' : 'toggle'} // if darkmode initialValue is falsy. use !darkMode to change default to dark mode
         />
       </div>
     </nav>

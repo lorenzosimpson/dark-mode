@@ -1,7 +1,5 @@
 import { useState } from 'react';
 
-
-
 export const useLocalStorage = (key, initialValue) => { //key needed to retrieve item from local storage
     const [storedValue, setStoredValue] = useState(() => {
         // To retrieve an item from localStorage, call localStorage.getItem('itemName')
@@ -13,8 +11,8 @@ export const useLocalStorage = (key, initialValue) => { //key needed to retrieve
         return item ? JSON.parse(item) : initialValue;
     });
 
-    // create the setter function
-    const setValue = value => {
+    // create the setter function.
+    const setValue = value => { // 
         // Save state
         setStoredValue(value);
         // Save to local storage
